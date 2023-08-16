@@ -1,0 +1,340 @@
+/* Sneakerheads_Season1_Episode2_00_04_39_22_RC-1598402465 1 */
+@import url('/pho-store-rebase/css/components/navigation.css');
+@import url('/pho-store-rebase/css/components/footer.css');
+
+#header-image{
+width: 100%;
+height: auto;
+margin-bottom: 50px;
+}
+#images-group{
+width: 90%;
+margin: 0px 75px;
+}
+.product-box{
+width: 80%;
+margin: 70px 10%;
+grid-template-columns: 210px 210px 210px 210px 210px;
+display: grid;
+column-gap: 35px;
+text-align: center;
+justify-content: space-around;
+}
+.product{
+width: 260px;
+height: 330px;
+border: solid 1px rgb(219, 219, 219);
+border-radius: 3px;
+}
+.product2{
+  width: 260px;
+height: 380px;
+border: solid 1px rgb(219, 219, 219);
+border-radius: 3px;
+}
+.product-type{
+display: flex;
+margin:80px 10%;
+width: 80%;
+justify-content: space-around;
+}
+.type{
+    color: rgb(66, 66, 66);
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    text-decoration-line:none ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.type:hover{
+    color:rgba(0, 222, 252, 1);
+}
+.hr{
+margin-top: 23px;
+width:35% ;
+height: 1px;
+color: rgb(128, 128, 128);
+background-color: rgb(128, 128, 128);
+}
+.contact-btn{
+    color: rgb(6, 6, 6);
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#fb-img{
+    width: 78%;
+    height: auto;
+    margin: 50px 11%;
+    
+}
+.hover-text{
+  background-color: #04AA6D;
+  color: white;
+  font-size: 20px;
+  padding: 16px 32px;
+  border-radius: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.product-img-block:hover .product-img{
+  opacity: 0.3;
+}
+.product-img-block:hover .middle{
+  opacity: 1;
+}
+.product-img {
+  opacity: 1;
+  display: block;
+  width: 90%;
+  height: auto;
+  margin-top: 15px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.product-infor{
+text-align: left;
+width: 95% ;
+margin: 20px 20px;
+
+}
+.product-name{
+    font-size: 18px;
+    font-family:sans-serif;
+    color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+    text-decoration-line: none ;
+}
+.product-brand{
+    font-size: 18px;
+    margin: 5px 0;
+
+}
+.product-img-block{
+    height: 180px;
+    position: relative;
+}
+.price{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px 0;
+}
+.price-1{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10px 0;
+}
+.mySlides {display: none;}
+.mySlides1 {display: none;
+    text-align: center;
+}
+.mySlides3{
+  text-align: center;
+  display: none;
+}
+.mySlides1 img{
+  padding: 0 50px;
+}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.slideshow-container2 {
+  width: 1200px;
+  justify-content: space-around;
+  position: relative;
+  margin: 80px auto;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot2 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@keyframes fade {
+  from {opacity: 1} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(124, 124, 124);
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.dot {
+  margin: 15px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.product-status__condition span {
+  color: var(--clr-blue);
+}
+
+.product-control { margin-bottom: 80px; }
+.product-control__product-carousel {
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 80px;
+}
+
+.product-control__product-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel button {
+  position: absolute;
+  top: 45%;
+  font-size: 7rem;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--clr-light-gray);
+  cursor: pointer;
+  transition: color .4s ease-in-out;
+}
+.carousel__img-list img{
+  margin: 40px;
+  padding:20px ;
+  border: solid 1px rgb(219, 219, 219);
+  border-radius: 3px;
+}
+.carousel button i {
+  transition: color .25s ease-in-out;
+}
+
+.carousel button:hover i {
+  color: var(--clr-blue);
+}
+
+.carousel .btn-prev {
+  left: 3rem;
+}
+
+.carousel .btn-next {
+  right: 3rem;
+}
+
+.carousel__img-feature {
+  width: 100.5rem;
+  height:  40rem 0px; 
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+}
+
+.carousel__img-list {
+  height: 85%;
+}
+
+.carousel__img-list img {
+  width: 57.5rem;
+  height: 20rem;
+  object-fit: cover;
+  object-fit: center;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel__img-list div {
+  font-size: 5rem;
+  display: grid;
+  place-items: center;
+  border: 2px solid red;
+}
+
+.carousel__img-list {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel__img-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+}
+
+.carousel__img-order span {
+  width: 2.5rem;
+  height: .5rem;
+  background-color: var(--clr-light-gray);
+  border-radius: var(--border-radius);
+  transition: background-color .1s ease-in-out;
+}
+
+.carousel__img-order span.highlight {
+  background-color: var(--clr-blue);
+}

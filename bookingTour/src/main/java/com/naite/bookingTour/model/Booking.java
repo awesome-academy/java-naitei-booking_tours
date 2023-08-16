@@ -2,18 +2,19 @@ package com.naite.bookingTour.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Entity
-@Table(name = "bookings")
-public class Booking implements Serializable{
+@Table(name = "booking")
+public class Booking implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,14 +22,17 @@ public class Booking implements Serializable{
     @Column(name = "fullname")
     private String fullName;
 
+    @Column(name = "email")
     private String email;
-    
+
+    @Column(name = "phone")
     private String phone;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
-    @Column(name = "price", precision = 10, scale = 2)
+    @Column(name = "price")
     private BigDecimal price;
 
     @Column(name = "num_of_guests")
@@ -47,29 +51,28 @@ public class Booking implements Serializable{
     private Tour tour;
 
     public enum BookingStatus {
-    	PENDING,
-    	APPROVED,  	
-    	REJECTED
+        PENDING,
+        APPROVED,
+        REJECTED,
+        CANCELLED
     }
 
-	public Booking() {
-		super();
-	}
+    public Booking() {
+        super();
+    }
 
-	public Booking(Long id, String fullName, String email, String phone, LocalDateTime createdAt, BigDecimal price,
-			Integer numOfGuests, BookingStatus status, User user, Tour tour) {
-		super();
-		this.id = id;
-		this.fullName = fullName;
-		this.email = email;
-		this.phone = phone;
-		this.createdAt = createdAt;
-		this.price = price;
-		this.numOfGuests = numOfGuests;
-		this.status = status;
-		this.user = user;
-		this.tour = tour;
-	}
-    
-    
+    public Booking(Long id, String fullName, String email, String phone, Date createdAt, BigDecimal price,
+            Integer numOfGuests, BookingStatus status, User user, Tour tour) {
+        super();
+        this.id = id;
+        this.fullName = fullName;
+        this.email = email;
+        this.phone = phone;
+        this.createdAt = createdAt;
+        this.price = price;
+        this.numOfGuests = numOfGuests;
+        this.status = status;
+        this.user = user;
+        this.tour = tour;
+    }
 }

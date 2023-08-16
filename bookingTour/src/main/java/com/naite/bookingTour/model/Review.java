@@ -1,9 +1,8 @@
 package com.naite.bookingTour.model;
 
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Date;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,13 +12,16 @@ import lombok.Setter;
 @Entity
 @Table(name = "reviews")
 public class Review implements Serializable {
+
+	private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(name = "content", columnDefinition = "TEXT")
     private String content;
 
+    @Column(name = "rating")
     private Integer rating;
 
     @Column(name = "created_at")

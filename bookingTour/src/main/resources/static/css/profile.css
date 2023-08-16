@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+body {
+  font-family: 'Inknut Antiqua', serif;
+  font-family: 'Ravi Prakash', cursive;
+  font-family: 'Lora', serif;
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Cabin', sans-serif;
+  padding: 5%;
+}
+
+.tab-content{
+    background:#DDD;
+}
+div.ticket-container {
+  max-width: 1350px;
+  margin: 0 auto 20px auto;
+  overflow: hidden
+}
+
+.ticket-container .item {
+  width: 48%;
+  float: left;
+  padding: 0 20px;
+  background: #fff;
+  overflow: hidden;
+  margin: 10px
+}
+.ticket-container .item-right, .container .item-left {
+  float: left;
+  padding: 20px 
+}
+.ticket-container .item-right {
+  padding: 79px 50px;
+  margin-right: 20px;
+  width: 25%;
+  position: relative;
+  height: 286px
+}
+.ticket-container .item-right .up-border, .container .item-right .down-border {
+    padding: 14px 15px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: absolute
+}
+.ticket-container .item-right .up-border {
+  top: -8px;
+  right: -35px;
+}
+.ticket-container .item-right .down-border {
+  bottom: -13px;
+  right: -35px;
+}
+.ticket-container .item-right .num {
+  font-size: 60px;
+  text-align: center;
+  color: #111
+}
+.ticket-container .item-right .day, .ticket-container .item-left .event {
+  color: #555;
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+.ticket-container .item-right .day {
+  text-align: left;
+  font-size: 25px;
+  width: 200px;
+}
+.ticket-container .item-left {
+  width: 71%;
+  padding: 34px 0px 19px 46px;
+  border-left: 3px dotted #999;
+} 
+.ticket-container .item-left .title {
+  color: #111;
+  font-size: 34px;
+  margin-bottom: 12px
+}
+.ticket-container .item-left .sce {
+  margin-top: 5px;
+  display: block
+}
+.ticket-container .item-left .sce .icon, .ticket-container .item-left .sce p,
+.ticket-container .item-left .loc .icon, .ticket-container .item-left .loc p{
+    float: left;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 10px;
+}
+.ticket-container .item-left .sce .icon, .container .item-left .loc .icon {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #666
+}
+.ticket-container .item-left .loc {display: block}
+.fix {clear: both}
+.ticket-container .item .tickets, .booked, .cancel{
+    color: #fff;
+    padding: 6px 14px;
+    float: right;
+    margin-top: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer
+}
+.ticket-container .item .tickets {background: #777}
+.ticket-container .item .booked {background: #3D71E9}
+.ticket-container .item .cancel {background: #DF5454}
+.linethrough {text-decoration: line-through}
+@media screen  {
+  .ticket-container .item {
+    width: 100%;
+    margin-right: 20px
+  }
+  div.ticket-container {
+    margin: 0 auto
+  }
+}

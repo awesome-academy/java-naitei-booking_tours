@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Tramin Traveling</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+
+    <link rel="shortcut icon" th:href="@{/images/favicon.ico}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+
+<body>
+<div id="auth">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-12 mx-auto">
+                <div class="card pt-4">
+                    <div class="card-body">
+                        <div class="text-center mb-5">
+                            <img th:src="@{/static/images/logo.jpg}" height="100" class='mb-4'>
+                            <h3>Register</h3>
+                            <p>Please register to continue to Tramin.</p>
+                        </div>
+                        <div th:if="${param.success}" class="text-center mb-5">
+							<div class="alert alert-success">Registration Successful! Your registration has been successful.</div>
+                        </div>
+                        <form th:action="@{/register/save}"
+                              th:object="${user}"
+                              method="post">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="username-column">Username</label>
+                                        <input th:field="*{username}" type="text" id="username-column" class="form-control" name="username" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="email-id-column">Email</label>
+                                        <input th:field="*{email}" type="email" id="email-id-column" class="form-control" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-column">FullName</label>
+                                        <input th:field="*{fullname}" type="text" id="first-name-column" class="form-control"  name="fullname" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="phone-column">Phone</label>
+                                        <input th:field="*{phone}" type="text" id="phone-column" class="form-control" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="address-column">Address</label>
+                                        <input th:field="*{address}" type="text" id="address-column" class="form-control" name="address">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="password-column">Password</label>
+                                        <input th:field="*{password}" type="password" id="password-column" class="form-control" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="confirm-password-column">Confirm Password</label>
+                                        <input th:field="*{repeatPassword}" type="password" id="confirm-password-column" class="form-control" name="password" required>
+                                    </div>
+                                </div>
+                            </diV>
+
+                            <a th:href="@{/login}">Have an account? <strong>Login.</strong></a>
+                            <div class="clearfix">
+                                <button class="btn btn-primary float-end">Submit</button>
+                            </div>
+                        </form>
+                        <div class="divider">
+                            <div class="divider-text">OR</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <button class="btn btn-block mb-2 btn-primary"><i data-feather="facebook"></i> Facebook</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button class="btn btn-block mb-2 btn-secondary"><i data-feather="github"></i> Github</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button class="btn btn-block mb-2 btn-danger"><i data-feather="at-sign"></i>
+                                    Google</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script th:src="@{/js/feather.min.js}"></script>
+<script th:src="@{/js/app.js}"></script>
+
+<script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

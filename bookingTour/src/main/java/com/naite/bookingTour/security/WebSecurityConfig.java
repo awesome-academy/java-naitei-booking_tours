@@ -24,27 +24,29 @@ public class WebSecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
-                        authorize.requestMatchers("/home").permitAll()
-                                .requestMatchers("/register/**").permitAll()
-                                .requestMatchers("/admin/**").hasRole("ADMIN")
+                        authorize
+//                                .requestMatchers("/home").permitAll()
+//                                .requestMatchers("/register/**").permitAll()
+//                                .requestMatchers("/admin/**").hasRole("ADMIN")
                                 .anyRequest().permitAll()
-                )
-                .formLogin(
-                        form -> form
-                                .loginPage("/login")
-                                .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/home")
-                                .permitAll()
-                )
-                .logout(
-                        logout -> logout
-                                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                                .permitAll()
                 );
+//                .formLogin(
+//                        form -> form
+//                                .loginPage("/login")
+//                                .loginProcessingUrl("/login")
+//                                .defaultSuccessUrl("/home")
+//                                .permitAll()
+//                )
+//                .logout(
+//                        logout -> logout
+//                                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+//                                .permitAll()
+//                );
         return http.build();
     }
 
