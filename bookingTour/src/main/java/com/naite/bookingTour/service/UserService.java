@@ -21,4 +21,6 @@ public interface UserService {
 	Optional<User> findUserById(Long id);
 
 	User getUserByUsername(String username);
+
+	Optional<User> findByUsername(String attribute);
 }
